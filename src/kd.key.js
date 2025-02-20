@@ -87,13 +87,13 @@ var Key = (function () {
    */
   Key.prototype.justPressed = function () {
     if(util.indexOf(keysDown, this.keyCode) !== -1){
-      if(Key.pressed){
+      if(this.pressed){
         return false
       }
-      Key.pressed = true
+      this.pressed = true
       return true
     }
-    Key.pressed = false
+    this.pressed = false
     return false
     
     // return util.indexOf(keysDown, this.keyCode) !== -1;
